@@ -8,7 +8,7 @@ function App() {
   
 const handleBirthday = (newBirthday) => {
 setBirthday(newBirthday)
-}
+};
 
   return (
     <div className='app'>
