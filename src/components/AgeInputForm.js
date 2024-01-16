@@ -14,7 +14,6 @@ if (!day || !month || !year) return;
 const newBirthday = {day, month, year};
 
 onAddBirthday(newBirthday);
-console.log(newBirthday);
 setDay('');
 setMonth('');
 setYear('');
@@ -26,20 +25,20 @@ setYear('');
     <form onSubmit={handleSubmit}>
       <label>
       <span>day</span>
-        <input value={day} onChange={(e) => setDay(Number(e.target.value))} placeholder='DD'/>
+        <input className='input' value={day} onChange={(e) => setDay(Number(e.target.value))} placeholder='DD' type='number' min='1' max='31'/>
       </label>
 
       <label>
       <span>month</span>
-        <input value={month} onChange={(e) => setMonth(Number(e.target.value))} placeholder='MM'/>
+        <input className='input' value={month} onChange={(e) => setMonth(Number(e.target.value))} placeholder='MM' type='number' min='1' max='12'/>
       </label>
 
       <label>
       <span>year</span>
-        <input value={year} onChange={(e) => setYear(Number(e.target.value))} placeholder='YYYY'/>
+        <input className='input' value={year} onChange={(e) => setYear(Number(e.target.value))} placeholder='YYYY' type='number'/>
       </label>
 
-      <button>+</button>
+      <button type='submit'>+</button>
     </form>
   )
 }

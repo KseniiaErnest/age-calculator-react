@@ -23,4 +23,36 @@ body {
  width: 52.2rem ;
  height: 40.6rem ;
  background-color:  hsl(0, 0%, 100%);
+ border-radius: 4% 4% 25% 4%;
+ border: 1px solid black;
+ padding: 3.5rem;
+}
+
+form {
+  width: 45.5;
+  display: flex;
+  gap: 2rem;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+}
+
+label span {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: hsl(0, 1%, 44%);
+  font-size: 14px;
+  letter-spacing: 3px ;
+  margin-bottom: 8px;
+}
+
+.input {
+  font-size: 2rem;
+  padding: 16px;
+  width: 10rem;
+  border-radius: 7px;
+  border: 1px solid hsl(0, 0%, 86%);
+  font-weight: 900;
 }
