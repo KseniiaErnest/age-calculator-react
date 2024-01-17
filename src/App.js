@@ -3,6 +3,12 @@ import { useState } from 'react';
 import AgeDisplay from './components/AgeDisplay';
 import AgeInputForm from './components/AgeInputForm';
 
+// fonts
+import './fonts/Poppins-Bold.ttf';
+import './fonts/Poppins-BoldItalic.ttf';
+import './fonts/Poppins-Bold.ttf';
+import './fonts/Poppins-ExtraBoldItalic.ttf'
+
 function App() {
   const [birthday, setBirthday] = useState({day: '', month: '', year: ''});
   

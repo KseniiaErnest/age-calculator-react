@@ -1,4 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+
+@font-face {
+  font-family: 'Bold';
+  src: local('Poppins-Bold'), 
+  url(./fonts/Poppins-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'BoldItalic';
+  src: local('Poppins-BoldItalic'), 
+  url(./fonts/Poppins-BoldItalic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'ExtraBoldItalic';
+  src: local('Poppins-ExtraBoldItalic'), 
+  url(./fonts/Poppins-ExtraBoldItalic.ttf) format('truetype');
+}
+
 
 * {
   margin: 0;
@@ -7,7 +26,7 @@
 }
 
 html {
-  font-family: "Poppins", sans-serif;
+  font-family: "Bold";
   font-size: 100%;
 }
 
@@ -29,7 +48,13 @@ body {
 }
 
 form {
+  display: flex;
+  flex-direction: column;
   width: 45.5;
+ 
+}
+
+.input-container {
   display: flex;
   gap: 2rem;
 }
@@ -55,4 +80,43 @@ label span {
   border-radius: 7px;
   border: 1px solid hsl(0, 0%, 86%);
   font-weight: 900;
+  cursor: pointer;
+
+}
+
+
+
+.btn-container {
+  position: relative;
+  display: flex;
+  justify-content: end;
+}
+
+.btn-container::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  /* width: 625.188px; */
+  width: 86.7%;
+  border-top: 2px solid hsl(0, 0%, 94%);
+}
+
+button {
+ 
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  border: none;
+  background-color: hsl(259, 100%, 65%);
+  
+}
+
+.result-container p {
+  font-family: 'ExtraBoldItalic';
+font-size: 5rem;
+}
+
+.result-container p span {
+  color: hsl(259, 100%, 65%);
 }

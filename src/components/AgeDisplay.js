@@ -13,10 +13,10 @@ const days = differenceInDays(now, birthdate) - differenceInDays(now, new Date(n
 
 
   return (
-    <div>
-    <p><span>{years}</span>years</p>
-      <p><span>{months}</span>months</p>
-      <p><span>{days}</span>days</p>
+    <div className='result-container'>
+    <p><span>{years}</span> years</p>
+      <p><span>{months}</span> months</p>
+      <p><span>{days}</span> days</p>
     </div>
   )
 }
