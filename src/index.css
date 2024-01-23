@@ -59,12 +59,23 @@ form {
   gap: 2rem;
 }
 
+
 form label {
   display: flex;
   flex-direction: column;
 }
 
-label span {
+.error > span {
+ color: hsl(0, 100%, 67%);
+}
+
+.error .input {
+  border-color:hsl(0, 100%, 67%);
+  outline-color: hsl(0, 100%, 67%);
+}
+
+
+label > span {
   text-transform: uppercase;
   font-weight: 700;
   color: hsl(0, 1%, 44%);
@@ -72,6 +83,7 @@ label span {
   letter-spacing: 3px ;
   margin-bottom: 8px;
 }
+
 
 .input {
   font-size: 2rem;
@@ -81,9 +93,20 @@ label span {
   border: 1px solid hsl(0, 0%, 86%);
   font-weight: 900;
   cursor: pointer;
-
+  outline-color: hsl(259, 100%, 65%);
+  
 }
 
+.input:hover {
+  border-color: hsl(259, 100%, 65%);
+}
+
+.error-message {
+color: hsl(0, 100%, 67%);
+font-style: italic;
+font-size: 12px;
+margin-top: 10px;
+}
 
 
 .btn-container {
@@ -109,7 +132,13 @@ button {
   border-radius: 50%;
   border: none;
   background-color: hsl(259, 100%, 65%);
+  cursor: pointer;
+  transition: all 0.3s;
   
+}
+
+button:hover {
+  background-color: hsl(0, 0%, 8%);
 }
 
 .result-container p {
