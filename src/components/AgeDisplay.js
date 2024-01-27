@@ -4,6 +4,7 @@ import {
   differenceInMonths,
   differenceInYears,
 } from "date-fns";
+import NoCalc from "./NoCalc";
 
 export default function AgeDisplay({
   birthday,
@@ -14,15 +15,7 @@ export default function AgeDisplay({
   if (dayError || monthError || yearError) {
     return (
       <div className="result-container">
-        <p>
-          <span>- -</span> years
-        </p>
-        <p>
-          <span>- -</span> months
-        </p>
-        <p>
-          <span>- -</span> days
-        </p>
+        <NoCalc />
       </div>
     );
   }
@@ -32,15 +25,7 @@ export default function AgeDisplay({
   if (!birthday || !birthday.year || !birthday.month || !birthday.day)
     return (
       <div className="result-container">
-        <p>
-          <span>- -</span> years
-        </p>
-        <p>
-          <span>- -</span> months
-        </p>
-        <p>
-          <span>- -</span> days
-        </p>
+       <NoCalc />
       </div>
     );
 

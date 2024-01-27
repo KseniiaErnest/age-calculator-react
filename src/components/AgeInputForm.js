@@ -417,7 +417,6 @@ export default function AgeInputForm({ onAddBirthday, dayError, setDayError, mon
       setDayError("This field is required");
     } else if (day < 1 || day > 31) {
       setDayError("Must be a valid day");
-      console.log("Invalid day:", day);
     }
 
     if (!month) {
@@ -435,15 +434,25 @@ export default function AgeInputForm({ onAddBirthday, dayError, setDayError, mon
       }
     }
 
-    // If no errors, proceed with form submission
-    const newBirthday = { day, month, year };
-    onAddBirthday(newBirthday);
+  console.log("dayError:", dayError);
+  console.log("monthError:", monthError);
+  console.log("yearError:", yearError);
 
-    // Clear input values after successful submission
-    setDay("");
-    setMonth("");
-    setYear("");
+    // If no errors, proceed with form submission
+    
+      const newBirthday = { day, month, year };
+      onAddBirthday(newBirthday);
+  
+      // Clear input values after successful submission
+      setDay("");
+      setMonth("");
+      setYear("");
+    
+
   };
+
+
+  
 
   return (
     <form onSubmit={handleSubmit}>
