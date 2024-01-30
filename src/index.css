@@ -47,12 +47,14 @@ body {
  border: none;
 padding: 3.5rem;
 box-shadow: rgba(0, 0, 0, 0.03) 0px 0px 0px 1px;
+
 }
 
 form {
   display: flex;
   flex-direction: column;
  margin: 0;
+ 
 }
 
 .input-container {
@@ -124,7 +126,6 @@ margin-top: 7px;
   position: absolute;
   top: 50%;
   left: 0;
-  /* width: 625.188px; */
   width: 86.7%;
   border-top: 2px solid hsl(0, 0%, 94%);
 }
@@ -155,8 +156,70 @@ line-height: 1.2;
   color: hsl(259, 100%, 65%);
 }
 
-@media all and (max-width: 60em ) {
+@media all and (max-width: 50em ) {
   .app {
-   width: 49rem;
+   width: 37.5rem;
+   padding: 3rem 1.5rem;
   }
+
+  .btn-container {
+    justify-content: center;
+    margin: 2rem 0;
+  }
+
+  .btn-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    border-top: 2px solid hsl(0, 0%, 94%);
+  }
+
+  button {
+    z-index: 10;
+  }
+}
+
+@media all and (max-width: 37.5em ) {
+
+  html {
+    
+    font-size: 70%;
+  }
+
+  .app {
+    height: 586px;
+    padding: 4rem 2rem;
+  }
+
+  .btn-container {
+   margin-bottom: 3.5rem;
+  }
+
+ 
+
+
+}
+
+@media all and (max-width: 28em ) {
+  html {
+    font-size: 55%;
+  }
+
+.app {
+  width: 343px;
+  height: 480px;
+  padding-top: 5.5rem;
+}
+
+  .btn-container {
+    margin-top: 0;
+   }
+
+   button svg {
+    width: 2.7rem;
+    height: 2.7rem;
+   }
+ 
 }

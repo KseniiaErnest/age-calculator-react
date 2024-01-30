@@ -52,10 +52,6 @@ export default function AgeInputForm({ onAddBirthday, dayError, setDayError, mon
       }
     }
 
-  console.log("dayError:", dayError);
-  console.log("monthError:", monthError);
-  console.log("yearError:", yearError);
-
     // If no errors, proceed with form submission
     
       const newBirthday = { day, month, year };
