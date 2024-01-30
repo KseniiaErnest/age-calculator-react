@@ -52,7 +52,6 @@ box-shadow: rgba(0, 0, 0, 0.03) 0px 0px 0px 1px;
 form {
   display: flex;
   flex-direction: column;
-  width: 45.5;
  margin: 0;
 }
 
@@ -154,4 +153,10 @@ line-height: 1.2;
 
 .result-container p span {
   color: hsl(259, 100%, 65%);
+}
+
+@media all and (max-width: 60em ) {
+  .app {
+   width: 49rem;
+  }
 }
